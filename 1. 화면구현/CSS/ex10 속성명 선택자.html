@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+    <head>	
+        <title>
+            연습
+        </title>		
+    </head>
+	
+    <body>
+
+        <style>
+            input[type="text"] { background: gray; }
+            /*선택자[속성명*='값'] -> 값이 포함되어 있는 속성*/
+            a[href*='www'] { background: orange; }
+            /*선택자[속성명^='값'] -> 값으로 시작되는 속성*/
+            a[href^='http:'] { background: blue; }
+            /*선택자[속성명$='값'] -> 값으로 끝나는 속성*/
+            a[href$='com'] { color: red; }
+        </style>
+
+        <input type="text">
+        <br>
+        <a href="https://www.naver.com">네이버</a>
+        <a href="https://www.daum.net">다음</a>
+        <a href="http://webnmobile.net">사이트</a>
+    </body>
+	
+</html>

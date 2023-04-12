@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
+/*  '*' = 공통 스타일 */
+* { font-family: 'Noto Sans KR', sans-serif; outline: none; box-sizing: border-box;
+color : #212121; }
+html { font-size: 13px; }
+body { margin: 0; }
+ul, ol { list-style-type: none; margin: 0; padding: 0; }
+li { margin: 0; padding: 0; }
+a { text-decoration: none; }
+img { border: 0; }
+
+/* 헤더 - 로고, 메뉴 영역 S */
+
+header #logo_menus { border-bottom: 1px solid #e6e6e6; display: flex; justify-content: space-between; padding: 18px 15px; }
+header #logo_menus .logo { height: 34px;}
+header #logo_menus i { font-size: 2.31rem; } /* i(아이콘)태그는 width,height가 아닌 font-size를 사용한다*/
+
+nav { display: flex; }
+nav a { flex-grow: 1; width: 0; text-align: center; padding: 15px 0; }
+
+/* 헤더 - 로고, 메뉴 영역 E */
+
+/* 메인 - 메인 배너 */
+main #main_banner img { width: 100%; display: block; } /* display: block 으로 태그와 태그 사이의 공백을 없앨 수 있다 */
+
+/* 메인 - 서브 메뉴 S */
+#sub_menus { display: flex; flex-wrap: wrap; border: 10px solid #ddd; border-left: 0; border-right: 0; }
+#sub_menus a { border-left: 1px solid #ddd; border-top: 1px solid #ddd; width: calc(100% / 3); text-align: center; height: 50px; font-weight: 500;  
+/*calc() 연산자 함수 */
+line-height: 49px; } /* line-height : 49+1(border) ; 행간과 높이를 맞추면 높이가 일정하게 된다 */
+#sub_menus a:nth-of-type(1),
+#sub_menus a:nth-of-type(2),
+#sub_menus a:nth-of-type(3) { border-top: 0; line-height: 50px; }
+#sub_menus a:nth-of-type(3n+1) { border-left: 0; }
+
+/* 메인 - 서브 메뉴 E */
+
+
+/* 메인 - 서브 배너 S */
+#sub_banners { display: flex; flex-wrap: wrap; margin-bottom: 20px; }
+#sub_banners img:nth-of-type(1) { width: 100%; }
+#sub_banners img:nth-of-type(2),
+#sub_banners img:nth-of-type(3) { width: calc(100% / 2); } /* 연산자 함수를 사용할 땐, 반드시 띄어쓰기를 해야한다*/
+
+/* 메인 - 서브 배너 E */
+
+
+/* 메인 - 상품 목록 S */
+.goods_list h3 { padding: 20px; font-size: 1.538rem; line-height: 1; text-align: center; }
+.goods_list ul { display: flex; flex-wrap: wrap; margin: 0 15px;  width: 100%; }
+.goods_items img { width: 100%; border: 1px solid #e6e6e6; border-radius: 10px; }
+
+
+/* 메인 - 상품 목록 E */

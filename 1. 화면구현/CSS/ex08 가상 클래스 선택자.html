@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>
+            연습
+        </title>
+    </head>
+
+    <body>
+
+        <style>
+            .box { width: 100px; height: 100px; background: orange; transition: all 1s; }
+            .box:hover { width: 200px; height: 200px; }
+
+            #text:focus { background: orange; }
+            #text:read-only { background: blue; }
+            #checkbox:checked+label { color: red; }
+
+        </style>
+
+        <div class="box"></div>
+        <input type="text" id="text" readonly value="읽기 전용">
+        <br>
+
+        <input type="checkbox" id="checkbox">
+        <label for="checkbox">체크 하세요</label>
+    </body>
+</html>

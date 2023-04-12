@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+    <head>	
+        <title>
+            연습
+        </title>		
+    </head>
+	
+    <body>
+
+        <style>
+            .box { width: 100px; height: 100px; margin: 40px; padding: 40px; }
+            .box1 { background: orange; display: inline-block;} /*display 속성으로 block속성을 inline으로 바꿀 수 있다*/
+            .box2 { background: blue; display: block; } /* inline 속성 -> block속성*/
+            /* display: none은 공간을 차지하지 않지만, visibility는 보이진 않으나 공간을 차지한다 */
+            .box3 { visibility: hidden; /*display: none;*/ }
+        </style>
+
+        <div class="box box1 box3">A</div>
+        <div class="box box1">B</div>
+
+        <span class="box box2">C</span>
+        <span class="box box2">D</span>
+
+    </body>
+	
+</html>

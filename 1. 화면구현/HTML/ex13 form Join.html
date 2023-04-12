@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>회원가입</title>
+    </head>
+    <body>
+        <h1>회원가입</h1>
+        <form method="post" action="Join_ps.html">
+            <input type="hidden" name="mode" value="join">
+            <dl>
+                <dt>회원구분</dt>
+                <dd>
+
+                        <input type="radio" name="memberType" id="memberType0" value="private" checked>
+                        <label for="memberType0">개인회원</label>
+
+                        <input type="radio" name="memberType" id="memberType1" value="business">
+                        <label for="memberType1">사업자 회원</label>
+
+                </dd>
+            </dl>
+            <hr>
+            <dl>
+                <dt>아이디</dt>
+                <dd>
+                    <input type="text" name="userId" placeholder="아이디를 입력하세요">
+                </dd>
+            </dl>
+            <dl>
+                <dt>비밀번호</dt>
+                <dd>
+                    <input type="password" name="userPw" placeholder="비밀번호를 입력하세요">
+                </dd>
+            </dl>
+            <dl>
+                <dt>비밀번호확인</dt>
+                <dd>
+                    <input type="password" name="userPwRe" placeholder="비밀번호 확인">
+                </dd>
+            </dl>
+            <dl>
+                <dt>회원명</dt>
+                <dd>
+                    <input type="text" name="userNm" placeholder="예)홍길동">
+                </dd>
+            </dl>
+            <dl>
+                <dt>휴대전화 번호</dt>
+                <dd>
+                    <select name="mobile">
+                        <option value="010">010</option>
+                        <option value="011" selected>011</option>
+                        <option value="016">016</option>
+                    </select>
+                    <input type="number" name="mobile">
+                    <input type="number" name="mobile">
+                </dd>
+            </dl>
+            <dl>
+                <dt>이메일</dt>
+                <dd>
+                    <input type="email" name="email" placeholder="text@example.com">
+                </dd>
+            </dl>
+            <dl>
+                <dt>취미</dt>
+                <dd>
+                    <label>
+                        <input type="checkbox" name="hobby" value="baseball">야구
+                    </label>
+                    <label>
+                        <input type="checkbox" name="hobby" value="basketball">농구
+                    </label>
+                    <label>
+                        <input type="checkbox" name="hobby" value="bollyball">배구
+                    </label>
+                    <label>
+                        <input type="checkbox" name="hobby" value="soccer">축구                    
+                    </label>
+                </dd>
+            </dl>
+            <dl>
+                <dt>자기소개</dt>
+                <dd>
+                    <textarea name="intro" rows="10" cols="30"></textarea>
+                </dd>
+            </dl>
+            <dl>
+                <dt>좋아하는 색상</dt>
+                <dd>
+                    <input type="color" name="color">
+                </dd>
+            </dl>
+            <dl>
+                <dt>생년월일</dt>
+                <dd>
+                        <input type="date" name="birthDt">
+                </dd>
+            </dl>
+            <dl>
+                <dt>신장</dt>
+                <dd>
+                    <input type="range" name="height" min="130" max="210">
+                </dd>
+            </dl>
+            <hr>
+            <button type="reset">다시입력</button>
+            <button type="submit">회원가입</button>
+
+            
+        </form>
+    </body>
+</html>

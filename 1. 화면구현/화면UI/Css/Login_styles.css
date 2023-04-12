@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
+/*  '*' = 공통 스타일 */
+* { font-family: 'Noto Sans KR', sans-serif; outline: none; box-sizing: border-box;
+color : #212121; }
+html { font-size: 13px; }
+body { margin: 0; }
+ul, ol { list-style-type: none; margin: 0; padding: 0; }
+li { margin: 0; padding: 0; }
+a { text-decoration: none; }
+img { border: 0; }
+
+/* 헤더 - 로고, 메뉴 영역 S */
+
+header h1 { margin-left: 10px; border-bottom: 1px solid #ccc; }
+
+/* 헤더 - 로고, 메뉴 영역 E */
+
+/* 메인 - 글, 로그인 영역 S */
+
+section { display: flex; flex-direction: column;}
+
+.main_box { margin-top: 5rem; display: flex; flex-wrap: wrap; width: 100%; height: 600px; justify-content: center;}
+.main_box .box1 { margin: 0 2rem; font-weight: 400; text-align: center; font-size: auto;}
+.main_box .box1 .under_line { margin-top: 2rem; border-bottom: 2px solid; font-weight: bold; }
+
+.main_box .box2 { width: 280px; height: 50%; border: 2px solid #ccc; 
+border-radius: 15px; }
+.main_box .box2 .headline { border: 1px rgb(153, 204, 255) solid; background-color: rgb(153, 204, 255);
+text-align: center; color: white; }
+
+.main_box .box2 .login_box { display: flex; flex-wrap: wrap; flex-direction: column; }
+
+.main_box .box2 .login_box .input_id { margin-top: 1rem; margin-left: 10%; width: 80%; height: 30px; 
+    border: 1px solid #ccc; border-radius: 5px; }
+
+.main_box .box2 .login_box .input_pw { margin-top: 25px; margin-left: 10%; width: 80%; height: 30px; 
+    border: 1px solid #ccc; border-radius: 5px; } 
+
+.main_box .box2 .login_box .bt_login { margin-top: 25px; margin-left: 10%; width: 80%; height: 30px;
+    border: 1px solid rgb(153, 204, 255); background-color: rgb(153, 204, 255); color: white; border-radius: 5px;
+cursor: pointer; }
+
+.main_box .box2 .login_box .bt_join { margin-top: 15px; margin-left: 25%; width: 50%; 
+    border: 1px solid rgb(146, 208, 80); background-color: rgb(146, 208, 80); color: white; border-radius: 3px;
+cursor: pointer; } 
+
+
+/* 메인 - 글, 로그인 영역 E */
+
+/* 메인 - 빈화면 */
+
+.empty_box { width: 100%; height: 100%;}

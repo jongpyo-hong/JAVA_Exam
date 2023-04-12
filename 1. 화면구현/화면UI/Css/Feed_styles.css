@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+
+/*  '*' = 공통 스타일 */
+* { font-family: 'Noto Sans KR', sans-serif; outline: none; box-sizing: border-box;
+color : #212121; }
+html { font-size: 13px; }
+body { margin: 0; }
+ul, ol { list-style-type: none; margin: 0; padding: 0; }
+li { margin: 0; padding: 0; }
+a { text-decoration: none; }
+img { border: 0; }
+
+/* 헤더 - nav 영역 S*/
+nav { margin: 0 1rem; }
+hr {margin: 10px;}
+nav a { margin: 5px;}
+nav a:hover { font-size: large;}
+
+.logout { justify-content: right; }
+.xi-log-out { width: 2px; text-align: right; }
+
+/* 헤더 - nav 영역 E*/
+
+/* 메인 - 게시물 영역 S */
+
+section {width: 500px; margin: 0 auto;}
+
+/* 프로필, 아이디 */
+.id_box { margin-top: 30px; margin-left: 50px; width: 500px; display: flex; flex-wrap: wrap;}
+.id_box a {margin-top: 10px; font-size: medium; font-weight: 700;}
+.id_box .xi-profile-o { cursor: pointer; font-size: 50px; width: 50px; height: 50px; }
+
+/* 게시물 이미지 */
+.img_box { width: 500px; }
+.img_box img { width: 80%; margin: 0 10%; cursor: pointer; }
+
+/* 좋아요 */
+.like { width: 100%; }
+.like label { cursor: pointer;}
+.like p {display: inline; font-weight: 700;}
+.like .xi-heart-on{ font-size: x-large; fill: red; color: red; margin-left: 10%; margin-top: 5px; transition: 0.7s; }
+.like .xi-heart { font-size: x-large;  margin-left: 10%; margin-top: 5px ; transition: 0.7s; }
+
+/* 댓글 */
+.comments { width: 100%; font-weight: 700;}
+.comments .comments_id { display: block; margin-left: 10%; width: fit-content; }
+.comments .comment { margin-left: 10%; color: #bbb; }
+
+/* 더보기 */
+.more { width: 100%; margin-top: 2rem; }
+.more a { margin-left: 45%; font-size: larger; color: rgb(103, 204, 255); font-weight: 600;}
+
+/* 메인 - 게시물 영역 E */

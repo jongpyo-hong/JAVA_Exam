@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>연습</title>
+    </head>
+    
+    <body>
+
+        <style>
+            .box { width: 100px; height: 100px; }
+            .box1 { top: 100px; left: 100px; position: relative; background: orange; }
+            .box2 { top: 100px; left: 100px; background: pink; position: absolute; }
+            .wrap { position: absolute; top: 300px; left: 300px; width: 700px;
+            height: 10000px; border: 1px solid blue; }
+            .box3 { position: fixed; bottom: 100px; right: 100px; background: violet; }
+        </style>
+
+        <div class="box box1"></div>
+
+        <div class="wrap">
+            <div class="box box2"></div>
+        </div>
+
+        <div class="box box3"></div>
+
+    </body>
+</html>

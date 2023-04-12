@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=divice-width, user-scalable=yes"initial-scale=1.0, maximum-scale=3.0, minimum-scale="0.5">
+<link rel="stylesheet" href="Css/Feed_styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+
+
+<html>
+    <head>
+        <title>
+            Social Media
+        </title>
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">Explore</a>
+                <a href="#">Create</a>
+                <a href="#">Profile</a>
+                <a href="Login_page.html">Logout</a>
+            </nav>
+
+            <hr>
+        </header>
+
+        <section>
+            <div class="id_box">
+                <div class="profile_img">
+                    <i class="xi-profile-o" alt="프로필 사진"></i>
+                </div>
+                <a href="#">example id</a>
+            </div>
+        </section>
+
+        <section>
+            <div class="img_box">
+                <img src="image/pome.jpg" alt="게시물: 강아지 사진">
+            </div>
+        </section>
+
+        <section>
+            <div class="like">
+                <label for="like">
+                    <i class="xi-heart" alt="좋아요: 하트"></i>
+                    <p>n likes</p>
+                </label>
+            </div>
+            <div class="comments">
+                <a class="comments_id" href="#">example id</a>
+                <a class="comment" href="#">Comments</a>
+            </div>
+            <div class="more">
+                <a href="#">More</a>
+            </div>
+        </section>
+
+        <script>
+
+           const heart = document.querySelector(".xi-heart")
+           heart.addEventListener(type="click", listener=function() {
+                heart.classList.toggle("xi-heart-on");
+           });
+        </script>
+
+    </body>
+
+</html>

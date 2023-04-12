@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+    <head>	
+        <title>
+            연습
+        </title>		
+    </head>
+	
+    <body>
+
+        <style>
+            body { margin: 0; }
+            .box { width: 50%; height: 300px; background: orange; margin-bottom: 10px; float: left; }
+            .box:nth-of-type(2n+1) {background: blue; }
+
+            @media all and (max-width: 600px) {
+                .box { width: 100% }
+            }
+        </style>
+
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </body>
+	
+</html>
