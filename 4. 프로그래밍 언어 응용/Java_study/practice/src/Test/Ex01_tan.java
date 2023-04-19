@@ -9,8 +9,7 @@ public class Ex01_tan {
 
         double radi = Math.toRadians(deg);
 
-        hei = dis * (Math.tan(radi));
+        hei = dis * Math.tan(radi);
         System.out.println(hei);
-
     }
 }
