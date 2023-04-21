@@ -7,6 +7,7 @@ import java.util.Scanner;
 public class Ex03 {
     public static void main(String[] args) {
         // 공약수, 공배수, 소수
+
         // 소수 : 1과 본인으로만 나눌수 있는 수
         int count = 0;
 
@@ -17,6 +18,8 @@ public class Ex03 {
                 }
             }
             if(count==2) {
+                System.out.println(i + "는 소수 입니다");
+            } else {
                 System.out.println(i + "는 소수가 아닙니다");
             }
             count=0;
@@ -34,6 +37,7 @@ public class Ex03 {
             }
         }
         System.out.println(arr);
+
         int gcd = arr.stream().mapToInt(n->n).max().orElse(1);
         System.out.println("최대공약수는 " + gcd);
 

@@ -11,5 +11,6 @@ public class Ex01_tan {
 
         hei = dis * Math.tan(radi);
         System.out.println(hei);
+
     }
 }
