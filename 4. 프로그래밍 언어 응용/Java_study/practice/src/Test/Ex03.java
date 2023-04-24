@@ -36,27 +36,11 @@ public class Ex03 {
                 arr.add(i);
             }
         }
-        System.out.println(arr);
 
+        System.out.println(arr);
         int gcd = arr.stream().mapToInt(n->n).max().orElse(1);
         System.out.println("최대공약수는 " + gcd);
-
-
-        // 공배수
-        int n1 = 22;
-        int n2 = 44;
-        int n3 = n1 > n2 ? n1:n2;
-
-        List<Integer> arr2 = new ArrayList<Integer>();
-        while(arr2.size() <= 10) {
-            if (n3%n1==0&& n3%n2==0) {
-                arr2.add(n3);
-            }
-            n3++;
-        }
-        System.out.println(arr2);
-        int lcm = arr2.stream().mapToInt(n->n).min().orElse(1);
-        System.out.println("최소공배수는 " + lcm);
+        System.out.println("최소공배수는 " + (num1 * num2) / gcd);
 
     }
 }
