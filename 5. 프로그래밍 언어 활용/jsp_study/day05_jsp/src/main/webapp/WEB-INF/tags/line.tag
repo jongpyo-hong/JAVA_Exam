@@ -10,7 +10,7 @@
     /**System.out.println(size instanceof Integer);
     System.out.println(color instanceof String);*/  // 자바 지역변수
 %>
-Size = ${size}, Color = ${color}<br> <%-- EL식 변수 --%>
+<%-- Size = ${size}, Color = ${color}<br> EL식 변수 --%>
 <%/**
     for (int i = 0; i < size; i++) {
         out.write("-");
