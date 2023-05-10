@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="751c1287-9b07-4ab6-96e7-ba1b2f74127b" name="변경" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../5. 프로그래밍 언어 활용/jsp_study/tddPractice/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../5. 프로그래밍 언어 활용/jsp_study/tddPractice/src/main/resources/META-INF/maven/archetype.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../5. 프로그래밍 언어 활용/jsp_study/tddPractice/src/main/resources/archetype-resources/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../5. 프로그래밍 언어 활용/jsp_study/tddPractice/src/main/resources/archetype-resources/src/main/java/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../5. 프로그래밍 언어 활용/jsp_study/tddPractice/src/main/resources/archetype-resources/src/test/java/AppTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../5. 프로그래밍 언어 활용/jsp_study/tddStudy/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/maven/archetype.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/archetype-resources/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/archetype-resources/src/main/java/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/archetype-resources/src/test/java/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../5. 프로그래밍 언어 활용/jsp_study/day05_jsp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../5. 프로그래밍 언어 활용/jsp_study/day05_jsp/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../5. 프로그래밍 언어 활용/jsp_study/tdd/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../5. 프로그래밍 언어 활용/jsp_study/tdd/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../5. 프로그래밍 언어 활용/jsp_study/tdd/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../5. 프로그래밍 언어 활용/jsp_study/tdd/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../5. 프로그래밍 언어 활용/jsp_study/tdd/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../5. 프로그래밍 언어 활용/jsp_study/tdd/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../5. 프로그래밍 언어 활용/jsp_study/tdd/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../5. 프로그래밍 언어 활용/jsp_study/tdd/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../5. 프로그래밍 언어 활용/jsp_study/tdd/src/test/java/models/member/JoinService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../5. 프로그래밍 언어 활용/jsp_study/tdd/src/test/java/models/member/JoinValidationException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../5. 프로그래밍 언어 활용/jsp_study/tdd/src/test/java/models/member/JoinValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../5. 프로그래밍 언어 활용/jsp_study/tdd/src/test/java/models/member/Member.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../5. 프로그래밍 언어 활용/jsp_study/tdd/src/test/java/tests/MemberJoinTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../5. 프로그래밍 언어 활용/jsp_study/tdd/src/test/java/tests/MemberJoinTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../5. 프로그래밍 언어 활용/jsp_study/tdd/src/test/java/validators/RequiredValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../5. 프로그래밍 언어 활용/jsp_study/tdd/src/test/java/validators/Validator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../5. 프로그래밍 언어 활용/jsp_study/tdd/target/test-classes/models/member/JoinService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../5. 프로그래밍 언어 활용/jsp_study/tdd/target/test-classes/models/member/JoinValidationException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../5. 프로그래밍 언어 활용/jsp_study/tdd/target/test-classes/models/member/JoinValidator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../5. 프로그래밍 언어 활용/jsp_study/tdd/target/test-classes/models/member/Member.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../5. 프로그래밍 언어 활용/jsp_study/tdd/target/test-classes/tests/MemberJoinTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../5. 프로그래밍 언어 활용/jsp_study/tdd/target/test-classes/tests/MemberJoinTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../5. 프로그래밍 언어 활용/jsp_study/tdd/target/test-classes/validators/RequiredValidator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../5. 프로그래밍 언어 활용/jsp_study/tdd/target/test-classes/validators/Validator.class" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="workspaceImportEnabled" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2PapdcbLl0nwtkSauC8hGbSuq2d" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "project.structure.last.edited": "모듈",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="Ex01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="exam01.Ex01" />
+      <module name="day01" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="exam01.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="애플리케이션.Ex01" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="디폴트 작업">
+      <changelist id="751c1287-9b07-4ab6-96e7-ba1b2f74127b" name="변경" comment="" />
+      <created>1683705134552</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1683705134552</updated>
+    </task>
+    <servers />
+  </component>
+</project>
