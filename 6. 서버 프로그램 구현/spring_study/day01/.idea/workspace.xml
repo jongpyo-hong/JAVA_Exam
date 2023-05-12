@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="751c1287-9b07-4ab6-96e7-ba1b2f74127b" name="변경" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/config/AppCtx.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/exam01/Ex01.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/exam01/Ex01.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,13 +28,6 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="workspaceImportEnabled" value="true" />
-      </MavenImportingSettings>
-    </option>
-  </component>
   <component name="ProjectId" id="2PapdcbLl0nwtkSauC8hGbSuq2d" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -50,7 +41,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/Administrator/Desktop/홍종표_/홍종표_Exam/6. 서버 프로그램 구현/spring_study/day01/src/main/java/exam03",
+    "last_opened_file_path": "C:/Users/Administrator/Desktop/홍종표_/홍종표_Exam/6. 서버 프로그램 구현/spring_study/day01",
     "project.structure.last.edited": "모듈",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0"
@@ -61,7 +52,7 @@
       <recent name="C:\Users\Administrator\Desktop\홍종표_\홍종표_Exam\6. 서버 프로그램 구현\spring_study\day01\src\main\java\exam03" />
     </key>
   </component>
-  <component name="RunManager" selected="애플리케이션.Ex02">
+  <component name="RunManager" selected="Application.Ex01">
     <configuration name="Ex01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="exam01.Ex01" />
       <module name="day01" />
@@ -114,14 +105,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="애플리케이션.Ex02" />
-        <item itemvalue="애플리케이션.exam03.Ex01" />
-        <item itemvalue="애플리케이션.exam02.Ex01" />
-        <item itemvalue="애플리케이션.Ex01" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
