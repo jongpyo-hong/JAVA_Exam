@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <body>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>순번</th>
+                    <th>짝/홀</th>
+                    <th>아이디</th>
+                    <th>회원명</th>
+                    <th>가입일자</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="member, status : ${members}" th:object="${member}">
+                    <!-- <td th:text="${status.index}"></td> -->
+                    <td>
+                        [[${status.count}]] / [[${status.first}]] / [[${status.last}]]
+                    </td>
+                    <td th:if="${status.count % 2 == 0}">짝수</td>
+                    <td th:unless="${status.count % 2 == 0}">홀수</td>
+                    <td th:text="*{@commonLib.toUpper(userId)}"></td>
+                    <td th:text="*{userNm}"></td>
+                    <td th:text="*{#temporals.format(regDt, 'yyyy.MM.dd')}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
