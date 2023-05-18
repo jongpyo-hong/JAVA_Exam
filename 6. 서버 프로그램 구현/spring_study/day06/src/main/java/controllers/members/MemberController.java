@@ -8,6 +8,7 @@ import models.member.*;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 
@@ -40,6 +41,13 @@ public class MemberController {
         }
 
         model.addAttribute("members", members);
+
+        String[] addCss= {"member/style", "order/style"};
+        List<String> addScript = Arrays.asList("member/form", "fileUpload");
+
+        model.addAttribute("addCss", addCss);
+        model.addAttribute("addScript", addScript);
+
         return "member/list";
     }
 }

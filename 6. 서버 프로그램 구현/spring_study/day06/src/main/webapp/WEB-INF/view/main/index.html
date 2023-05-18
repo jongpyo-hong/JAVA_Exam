@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/main}">
+
+    <th:block layout:fragment="addCss">
+        <Link rel="stylesheet" type="text/css" th:href="@{/css/test.css}">
+    </th:block>
+
+    <th:block layout:fragment="addScript">
+        <script th:src="@{/js/test.js}"></script>
+    </th:block>
+
+    <main layout:fragment="content">
+        <h1>메인페이지</h1>
+    </main>
+</html>

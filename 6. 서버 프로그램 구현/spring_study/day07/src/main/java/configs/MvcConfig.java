@@ -6,6 +6,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
 import org.springframework.context.support.ResourceBundleMessageSource;
 import org.springframework.web.servlet.config.annotation.*;
 import org.thymeleaf.extras.java8time.dialect.Java8TimeDialect;
@@ -13,30 +14,23 @@ import org.thymeleaf.spring5.SpringTemplateEngine;
 import org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver;
 import org.thymeleaf.spring5.view.ThymeleafViewResolver;
 
-
 @Configuration
 @EnableWebMvc
+@Import(DbConfig.class) // 설정 클래스 통합할 때, 복수의 설정 클래스라면 {...class, ...class} 안에 입력 하나라면 (...class)
 public class MvcConfig implements WebMvcConfigurer {
 
     @Autowired
-    private ApplicationContext applicationContext;
+    private ApplicationContext applicationContext; // 스프링 컨테이너
 
     @Override
-    public void addViewControllers(ViewControllerRegistry registry) {
-        // 컨트롤러 없이 바로 URL 과 템플릿을 연결할 때 주로 쓴다 (데이터가 필요없는 페이지 등) main/index.html
-        registry.addViewController("/")
-                .setViewName("main/index");
+    public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
+        configurer.enable();
     }
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/**")
                 .addResourceLocations("classpath:/static/");
-    }
-
-    @Override
-    public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
-        configurer.enable();
     }
 
 
@@ -46,7 +40,7 @@ public class MvcConfig implements WebMvcConfigurer {
         templateResolver.setApplicationContext(applicationContext);
         templateResolver.setPrefix("/WEB-INF/view/");
         templateResolver.setSuffix(".html");
-        templateResolver.setCacheable(false); // 캐시 여부 설정
+        templateResolver.setCacheable(false);
         return templateResolver;
     }
 
@@ -55,7 +49,7 @@ public class MvcConfig implements WebMvcConfigurer {
         SpringTemplateEngine templateEngine = new SpringTemplateEngine();
         templateEngine.setTemplateResolver(templateResolver());
         templateEngine.setEnableSpringELCompiler(true);
-        templateEngine.addDialect(new Java8TimeDialect()); // #temporals 추가
+        templateEngine.addDialect(new Java8TimeDialect());
         templateEngine.addDialect(new LayoutDialect());
         return templateEngine;
     }
@@ -75,16 +69,13 @@ public class MvcConfig implements WebMvcConfigurer {
     }
 
     @Bean
-    public MessageSource messageSource() { // resources 패키지에 messages 패키지 추가 -> commons.properties 파일 추가
+    public MessageSource messageSource() {
         ResourceBundleMessageSource ms = new ResourceBundleMessageSource();
-        ms.setBasenames("messages.commons"); // 확장자를 쓰지 않는다
         ms.setDefaultEncoding("UTF-8");
+        ms.setBasenames("messages.commons, messages.errors, messages.validations");
 
         return ms;
     }
 
-    @Bean
-    public CommonLib commonLib() {
-        return new CommonLib();
-    }
+
 }
