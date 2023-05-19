@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/main}">
+
+<main layout:fragment="content">
+    <form method="post" th:action="@{/member/login}" th:object="${loginForm}">
+        <div th:each="err: ${#fields.globalErrors()}" th:text="${err}"></div>
+        <dl>
+            <dt>아이디</dt>
+            <dd>
+                <input type="text" name="userId" th:field="*{userId}">
+                <div th:each="err : ${#fields.errors('userId')}" th:text="${err}"></div>
+            </dd>
+        </dl>
+        <dl>
+            <dt>비밀번호</dt>
+            <dd>
+                <input type="password" name="userPw" th:field="*{userPw}">
+                <div th:each="err : ${#fields.errors('userPw')}" th:text="${err}"></div>
+            </dd>
+        </dl>
+        <div>
+            <input type="checkbox" name="saveId" th:field="*{saveId}" id="saveId">
+            <label for="saveId">아이디 저장</label>
+        </div>
+        <button type="submit">로그인</button>
+    </form>
+</main>
+</html>

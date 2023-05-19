@@ -5,18 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b913f0cc-eecc-476c-8185-87ee024cedba" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/maven/archetype.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/archetype-resources/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/archetype-resources/src/main/java/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/archetype-resources/src/test/java/AppTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day06/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../day06/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day06/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../day06/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day06/src/main/java/configs/MvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../day06/src/main/java/configs/MvcConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day06/src/main/java/controllers/members/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../day06/src/main/java/controllers/members/MemberController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../day06/src/main/webapp/WEB-INF/view/member/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../day06/src/main/webapp/WEB-INF/view/member/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/configs/ControllerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/configs/ControllerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/configs/MvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/configs/MvcConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/JoinForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/JoinForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/JoinValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/JoinValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/MemberController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/messages/validations.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/messages/validations.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/member/join.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/member/join.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/member/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/member/login.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +54,10 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/Administrator/Desktop/홍종표_/홍종표_Exam/6. 서버 프로그램 구현/spring_study/day07/src",
+    "last_opened_file_path": "C:/Users/Administrator/Desktop/홍종표_/홍종표_Exam/6. 서버 프로그램 구현/spring_study/day07",
+    "project.structure.last.edited": "프로젝트",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "File.Encoding"
   }
 }]]></component>
@@ -69,9 +70,6 @@
       <predefined_log_file id="Tomcat Host Manager Log" />
       <option name="contextPath" value="/day07" />
       <option name="docBase" value="$PROJECT_DIR$/src/main/webapp" />
-      <option name="envOptions">
-        <map />
-      </option>
       <option name="extraClassPath" value="" />
       <option name="port" value="3000" />
       <option name="tomcatInfo">

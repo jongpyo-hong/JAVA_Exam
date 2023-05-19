@@ -4,6 +4,7 @@
       layout:decorate="~{layouts/main}">
 <main layout:fragment="content">
     <form method="post" th:action="@{/member/join}" th:object="${joinForm}">
+        <div th:each="err : ${#fields.globalErrors()}" th:text="${err}"></div>
         <dl>
             <dt>아이디</dt>
             <dd>
@@ -16,7 +17,6 @@
             <dd>
                 <input type="password" name="userPw" th:field="*{userPw}">
                 <div th:each="err : ${#fields.errors('userPw')}" th:text="${err}"></div>
-
             </dd>
         </dl>
         <dl>
@@ -24,7 +24,6 @@
             <dd>
                 <input type="password" name="userPwRe" th:field="*{userPwRe}">
                 <div th:each="err : ${#fields.errors('userPwRe')}" th:text="${err}"></div>
-
             </dd>
         </dl>
         <dl>
@@ -32,7 +31,6 @@
             <dd>
                 <input type="text" name="userNm" th:field="*{userNm}">
                 <div th:each="err : ${#fields.errors('userNm')}" th:text="${err}"></div>
-
             </dd>
         </dl>
         <dl>
@@ -45,22 +43,21 @@
                 <input type="text" name="addr2" th:field="*{address.addr2}">
             </dd>
         </dl>
-
         <dl>
             <dt>취미</dt>
             <dd>
                 <input type="checkbox" name="hobby" value="취미1" th:field="*{hobby}">
                 취미1
-                <input type="checkbox" name="hobby" value="취미1" th:field="*{hobby}">
+                <input type="checkbox" name="hobby" value="취미2" th:field="*{hobby}">
                 취미2
-                <input type="checkbox" name="hobby" value="취미1" th:field="*{hobby}">
+                <input type="checkbox" name="hobby" value="취미3" th:field="*{hobby}">
                 취미3
             </dd>
         </dl>
-
         <div>
             <input type="checkbox" name="agree" value="true" id="agree" th:field="*{agree}">
             <label for="agree">약관에 동의합니다.</label>
+            <div th:each="err : ${#fields.errors('agree')}" th:text="${err}"></div>
         </div>
         <button type="submit">가입하기</button>
     </form>

@@ -16,11 +16,11 @@ import org.thymeleaf.spring5.view.ThymeleafViewResolver;
 
 @Configuration
 @EnableWebMvc
-@Import(DbConfig.class) // 설정 클래스 통합할 때, 복수의 설정 클래스라면 {...class, ...class} 안에 입력 하나라면 (...class)
+@Import(DbConfig.class)
 public class MvcConfig implements WebMvcConfigurer {
 
     @Autowired
-    private ApplicationContext applicationContext; // 스프링 컨테이너
+    private ApplicationContext applicationContext;
 
     @Override
     public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
@@ -32,7 +32,6 @@ public class MvcConfig implements WebMvcConfigurer {
         registry.addResourceHandler("/**")
                 .addResourceLocations("classpath:/static/");
     }
-
 
     @Bean
     public SpringResourceTemplateResolver templateResolver() {
@@ -72,10 +71,8 @@ public class MvcConfig implements WebMvcConfigurer {
     public MessageSource messageSource() {
         ResourceBundleMessageSource ms = new ResourceBundleMessageSource();
         ms.setDefaultEncoding("UTF-8");
-        ms.setBasenames("messages.commons, messages.errors, messages.validations");
+        ms.setBasenames("messages.commons", "messages.errors", "messages.validations");
 
         return ms;
     }
-
-
 }
