@@ -4,6 +4,7 @@
       layout:decorate="~{layouts/main}">
 
 <main layout:fragment="content">
+    [[${commonValue}]]
     <form method="post" th:action="@{/member/login}" th:object="${loginForm}">
         <div th:each="err: ${#fields.globalErrors()}" th:text="${err}"></div>
         <dl>

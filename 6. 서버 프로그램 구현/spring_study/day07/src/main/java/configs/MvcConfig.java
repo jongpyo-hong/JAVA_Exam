@@ -75,4 +75,32 @@ public class MvcConfig implements WebMvcConfigurer {
 
         return ms;
     }
+
+    @Override
+    public void addInterceptors(InterceptorRegistry registry) {
+        // mypage 전용 인터셉터 (접근제어)
+        registry.addInterceptor(memberOnlyInterceptor())
+                .addPathPatterns("/mypage/**");
+
+        // 페이지 공통 인터셉터(공통기능)
+        registry.addInterceptor(commonInterceptor())
+                .addPathPatterns("/**");
+
+    }
+
+    @Override
+    public void addViewControllers(ViewControllerRegistry registry) {
+        registry.addViewController("/mypage")
+                .setViewName("mypage/index");
+    }
+
+    @Bean
+    public MemberOnlyInterceptor memberOnlyInterceptor() {
+        return new MemberOnlyInterceptor();
+    }
+
+    @Bean
+    public CommonInterceptor commonInterceptor() {
+        return new CommonInterceptor();
+    }
 }
