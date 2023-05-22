@@ -14,8 +14,10 @@ import java.util.Optional;
 @Controller
 @RequestMapping("/member")
 public class MemberController {
+
     @Autowired
     private JoinValidator joinValidator;
+
     @Autowired
     private LoginValidator loginValidator;
 
@@ -36,8 +38,7 @@ public class MemberController {
     }
 
     @PostMapping("/join")
-    public String joinPs(@Valid JoinForm joinForm, Errors errors) { // @Valid : 스프링에게 검증을 위임 (Errors 변수가 반드시 뒤에 와야한다)
-
+    public String joinPs(@Valid JoinForm joinForm, Errors errors) {
         joinValidator.validate(joinForm, errors);
 
         if (errors.hasErrors()) {
@@ -54,7 +55,7 @@ public class MemberController {
 
     @GetMapping("/login")
     public String login(@ModelAttribute LoginForm loginForm,
-                        @CookieValue(required = false, name="saveId") String sId) { // @CookieValue : 쿠키값을 뒤쪽 변수에 저장한다, required 가 기본적으로 true, false 로 바꿔줘야 쿠키가 없어도 에러가 안뜬다
+                        @CookieValue(required=false, name="saveId") String sId) {
         System.out.println(sId);
         if (sId != null) {
             loginForm.setUserId(sId);
@@ -65,7 +66,6 @@ public class MemberController {
 
     @PostMapping("/login")
     public String loginPs(@Valid LoginForm loginForm, Errors errors) {
-
         loginValidator.validate(loginForm, errors);
 
         if (errors.hasErrors()) {
@@ -75,6 +75,26 @@ public class MemberController {
         // 로그인 처리
         loginService.login(loginForm);
 
-        return "redirect:/"; // 메인페이지로 이동
+        return "redirect:/"; // 메인페이지
     }
+
+    @GetMapping("/list")
+    public String members(@ModelAttribute @Valid SearchForm searchForm, Errors errors) {
+
+        return "member/list";
+    }
+
+    @GetMapping("/info/{id}")
+    public String info(@PathVariable(required=false, name="id") String userId) {
+        System.out.println(userId);
+
+        boolean result = true;
+        if (result) {
+            throw new RuntimeException("예외 발생 합니다...");
+        }
+
+        return "member/info";
+    }
+
+
 }

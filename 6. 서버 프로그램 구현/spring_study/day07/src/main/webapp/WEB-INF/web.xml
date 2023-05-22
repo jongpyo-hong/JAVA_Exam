@@ -22,6 +22,10 @@ http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd">
                 configs.ControllerConfig
             </param-value>
         </init-param>
+        <init-param>
+            <param-name>spring.profiles.active</param-name>
+            <param-value>real</param-value>
+        </init-param>
         <load-on-startup>1</load-on-startup>
     </servlet>
 
