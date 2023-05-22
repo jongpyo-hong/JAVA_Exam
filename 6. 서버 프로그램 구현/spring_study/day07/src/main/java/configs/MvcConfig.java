@@ -31,6 +31,9 @@ public class MvcConfig implements WebMvcConfigurer {
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/**")
                 .addResourceLocations("classpath:/static/");
+
+        registry.addResourceHandler("/uploads/**")
+                .addResourceLocations("file:///D:/uploads/");
     }
 
     @Bean
@@ -74,5 +77,31 @@ public class MvcConfig implements WebMvcConfigurer {
         ms.setBasenames("messages.commons", "messages.errors", "messages.validations");
 
         return ms;
+    }
+
+    @Override
+    public void addViewControllers(ViewControllerRegistry registry) {
+        registry.addViewController("/mypage")
+                .setViewName("mypage/index");
+    }
+
+    @Override
+    public void addInterceptors(InterceptorRegistry registry) {
+        registry.addInterceptor(memberOnlyInterceptor())
+                .addPathPatterns("/mypage/**");
+
+        registry.addInterceptor(commonInterceptor())
+                .addPathPatterns("/**");
+
+    }
+
+    @Bean
+    public MemberOnlyInterceptor memberOnlyInterceptor() {
+        return new MemberOnlyInterceptor();
+    }
+
+    @Bean
+    public CommonInterceptor commonInterceptor() {
+        return new CommonInterceptor();
     }
 }
