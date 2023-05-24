@@ -6,10 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="b913f0cc-eecc-476c-8185-87ee024cedba" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/src/main/java/configs/DbConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/configs/DbConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/configs/MvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/configs/MvcConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controllers/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/MemberController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/file/file.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/file/upload.html" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/src/main/java/configs/MvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/configs/MvcConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/MemberController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/messages/validations.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/messages/validations.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/member/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/view/member/login.html" afterDir="false" />
+>>>>>>> 61fd14af1414e60d0cd581d87688cf376330dbbb
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -50,7 +57,11 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
+<<<<<<< HEAD
     "last_opened_file_path": "C:/Users/Administrator/Desktop/홍종표_/홍종표_Exam/6. 서버 프로그램 구현/spring_study/boot1",
+=======
+    "last_opened_file_path": "C:/Users/Administrator/Desktop/홍종표/새 폴더/6. 서버 프로그램 구현/spring_study/day07",
+>>>>>>> 61fd14af1414e60d0cd581d87688cf376330dbbb
     "project.structure.last.edited": "프로젝트",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
@@ -66,11 +77,14 @@
       <predefined_log_file id="Tomcat Host Manager Log" />
       <option name="contextPath" value="/day07" />
       <option name="docBase" value="$PROJECT_DIR$/src/main/webapp" />
+      <option name="envOptions">
+        <map />
+      </option>
       <option name="extraClassPath" value="" />
       <option name="port" value="3000" />
       <option name="tomcatInfo">
         <TomcatInfo>
-          <option name="name" value="Apache Tomcat/9.0.74" />
+          <option name="name" value="Apache Tomcat/9.0.74 (3)" />
           <option name="path" value="$PROJECT_DIR$/../../../../apache-tomcat-9.0.74" />
           <option name="version" value="9.0.74.0" />
         </TomcatInfo>

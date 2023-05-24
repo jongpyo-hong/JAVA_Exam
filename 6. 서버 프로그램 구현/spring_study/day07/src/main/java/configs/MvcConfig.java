@@ -89,11 +89,27 @@ public class MvcConfig implements WebMvcConfigurer {
     }
 
     @Override
+<<<<<<< HEAD
+=======
+    public void addInterceptors(InterceptorRegistry registry) {
+        // mypage 전용 인터셉터 (접근제어)
+        registry.addInterceptor(memberOnlyInterceptor())
+                .addPathPatterns("/mypage/**");
+
+        // 페이지 공통 인터셉터(공통기능)
+        registry.addInterceptor(commonInterceptor())
+                .addPathPatterns("/**");
+
+    }
+
+    @Override
+>>>>>>> 61fd14af1414e60d0cd581d87688cf376330dbbb
     public void addViewControllers(ViewControllerRegistry registry) {
         registry.addViewController("/mypage")
                 .setViewName("mypage/index");
     }
 
+<<<<<<< HEAD
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(memberOnlyInterceptor())
@@ -104,6 +120,8 @@ public class MvcConfig implements WebMvcConfigurer {
 
     }
 
+=======
+>>>>>>> 61fd14af1414e60d0cd581d87688cf376330dbbb
     @Bean
     public MemberOnlyInterceptor memberOnlyInterceptor() {
         return new MemberOnlyInterceptor();
@@ -113,6 +131,7 @@ public class MvcConfig implements WebMvcConfigurer {
     public CommonInterceptor commonInterceptor() {
         return new CommonInterceptor();
     }
+<<<<<<< HEAD
 
     @Bean
     public static PropertySourcesPlaceholderConfigurer properties() {
@@ -122,4 +141,6 @@ public class MvcConfig implements WebMvcConfigurer {
 
         return conf;
     }
+=======
+>>>>>>> 61fd14af1414e60d0cd581d87688cf376330dbbb
 }

@@ -50,6 +50,7 @@ public class BoardController {
 
         return "board/view";
     }
+<<<<<<< HEAD
 
     @ResponseBody // : Content-Type 을 application/json 형태로 반환한다
     @GetMapping("/list2")
@@ -58,4 +59,6 @@ public class BoardController {
 
         return items;
     }
+=======
+>>>>>>> 61fd14af1414e60d0cd581d87688cf376330dbbb
 }

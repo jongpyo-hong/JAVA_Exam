@@ -77,13 +77,17 @@ public class MemberController {
 
         return "redirect:/"; // 메인페이지
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 61fd14af1414e60d0cd581d87688cf376330dbbb
     @GetMapping("/list")
     public String members(@ModelAttribute @Valid SearchForm searchForm, Errors errors) {
 
         return "member/list";
     }
 
+<<<<<<< HEAD
     @GetMapping("/info/{id}")
     public String info(@PathVariable(required=false, name="id") String userId) {
         System.out.println(userId);
@@ -91,6 +95,17 @@ public class MemberController {
         boolean result = true;
         if (result) {
             throw new RuntimeException("예외 발생 합니다...");
+=======
+    @GetMapping("/info/{id}") // {...} : 중괄호 안쪽에 입력하면 경로 변수가 된다
+    public String info(@PathVariable(required = false, name = "id") String userId) {
+        // 경로변수를 사용하려면 매개변수가 경로변수와 같아야한다
+        // 경로변수가 매개변수와 다르다면 @PathVariable(name="경로변수") name 에 경로변수값을 넣으면 된다
+
+        System.out.println(userId);
+        boolean result = true;
+        if (result) {
+            throw new RuntimeException("예외 발생 입니다");
+>>>>>>> 61fd14af1414e60d0cd581d87688cf376330dbbb
         }
 
         return "member/info";

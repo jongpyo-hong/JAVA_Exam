@@ -2,11 +2,20 @@
 <html xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorate="~{layouts/main}">
+<<<<<<< HEAD
 <main layout:fragment="content">
 
     <form method="post" th:action="@{/file/upload}" enctype="multipart/form-data">
         <input type="text" name="data">
         <input type="file" name="files" multiple>
+=======
+
+<main layout:fragment="content">
+
+    <form method="post" th:action="@{/file/upload}" enctype="multipart/form-data">
+        <input type="text" name="data"><br>
+        <input type="file" name="files" multiple><br>
+>>>>>>> 61fd14af1414e60d0cd581d87688cf376330dbbb
         <button type="submit">업로드</button>
     </form>
 

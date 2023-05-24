@@ -11,6 +11,13 @@ public class CommonController {
         model.addAttribute("message", e.getMessage());
 
         e.printStackTrace();
+<<<<<<< HEAD
         return "error/common";
     }
 }
+=======
+
+        return "error/common";
+    }
+}
+>>>>>>> 61fd14af1414e60d0cd581d87688cf376330dbbb
