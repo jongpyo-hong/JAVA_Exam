@@ -2,10 +2,7 @@ package org.koreait.entities;
 
 import jakarta.persistence.*;
 import lombok.Data;
-import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.UpdateTimestamp;
-
-import java.time.LocalDateTime;
+import lombok.ToString;
 
 @Data
 @Entity
@@ -24,4 +21,9 @@ public class BoardData extends BaseEntity{
 
     @Column(length = 40, nullable = false)
     private String poster;
+
+    @ManyToOne
+    @JoinColumn(name="user_no")
+    @ToString.Exclude
+    private Member member;
 }

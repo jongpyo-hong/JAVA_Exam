@@ -7,7 +7,9 @@ import org.hibernate.annotations.UpdateTimestamp;
 import org.koreait.constants.MemberType;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 @Data
 @Entity
@@ -40,4 +42,7 @@ public class Member extends BaseEntity{
 
     @Temporal(TemporalType.DATE) // 날짜와 시간
     private Date birthDt;
+
+    @OneToMany(mappedBy = "member")
+    private List<BoardData> boardDatas = new ArrayList<>();
 }
