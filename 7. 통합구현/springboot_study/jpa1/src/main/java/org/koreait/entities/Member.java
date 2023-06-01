@@ -1,7 +1,7 @@
 package org.koreait.entities;
 
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 import org.koreait.constants.MemberType;
@@ -11,8 +11,10 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-@Data
+@Data @Builder
 @Entity
+@AllArgsConstructor
+@NoArgsConstructor
 @Table(name = "users", indexes = {
         @Index(name="idx_member_usernm", columnList = "userNm")
 }) // 테이블 명이 users로 생성 (엔티티명 과 테이블 명이 다를 경우)
@@ -43,6 +45,11 @@ public class Member extends BaseEntity{
     @Temporal(TemporalType.DATE) // 날짜와 시간
     private Date birthDt;
 
-    @OneToMany(mappedBy = "member")
-    private List<BoardData> boardDatas = new ArrayList<>();
+    @OneToMany(mappedBy = "member", fetch = FetchType.LAZY) // BoardData에 정의되어 있는 member
+    private List<BoardData> boarDatas = new ArrayList<>();
+
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "address_id")
+    @ToString.Exclude
+    private Address address;
 }
