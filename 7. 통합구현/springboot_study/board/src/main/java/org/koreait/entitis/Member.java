@@ -1,0 +1,33 @@
+package org.koreait.entitis;
+
+import jakarta.persistence.*;
+import lombok.*;
+
+import java.util.ArrayList;
+import java.util.List;
+
+
+@Entity @Data @Builder
+@AllArgsConstructor @NoArgsConstructor
+public class Member extends BaseEntity {
+    @Id @GeneratedValue
+    private Long userNo; // 회원번호
+
+    @Column(length = 40, nullable = false, unique = true)
+    private String userId; // 아이디
+
+    @Column(length = 65, nullable = false)
+    private String userPw; // 비밀번호
+
+    @Column(length = 40, nullable = false)
+    private String userNm; // 회원명
+
+    @Column(length = 100)
+    private String email; // 이메일
+
+    @Column(length = 11)
+    private String mobile; // 휴대폰 번호
+
+    @OneToMany(mappedBy = "member")
+    private List<BoardData> boarDatas = new ArrayList<>();
+}

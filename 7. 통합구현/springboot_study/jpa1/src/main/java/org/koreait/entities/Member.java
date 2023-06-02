@@ -45,7 +45,7 @@ public class Member extends BaseEntity{
     @Temporal(TemporalType.DATE) // 날짜와 시간
     private Date birthDt;
 
-    @OneToMany(mappedBy = "member", fetch = FetchType.LAZY) // BoardData에 정의되어 있는 member
+    @OneToMany(mappedBy = "member", fetch = FetchType.LAZY, cascade = CascadeType.REMOVE) // BoardData에 정의되어 있는 member
     private List<BoardData> boarDatas = new ArrayList<>();
 
     @OneToOne(fetch = FetchType.LAZY)

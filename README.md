@@ -13,3 +13,53 @@
   
   - 조회수 관련 엔티티
     -> entitis.BoardsView, BoardsViewsId 엔티티 클래스 추가
+
+## 2023/06/02 강의
+
+### Log
+
+- 1교시
+
+- 영속성 전이
+  - JPAExam5Controller 예제추가
+
+- 새로운 project(board) 생성
+
+  - 의존성 (spring initializr)
+    - spring Devtools
+    - lombok
+    - spring web
+    - thymeleaf
+    - h2 database (scope=test)
+    - validation
+    - spring data jpa
+  
+  - 의존성 (maven repository)
+    - ojdbc8
+    - timeleaf layout
+    - querydsl jpa
+    - querydsl apt
+      - plugin
+    - Model Mapper
+
+
+- 2교시
+
+- 연관관계 매핑
+
+- 3교시
+
+- Spring Security
+
+  - configs -> SecurityConfig클래스 추가
+    - login은 지원, join X
+
+  - thymeleaf 기본 설정 추가
+
+  - 정적자원 (css, js, messages) 추가
+    - messages -> MvcConfig에서 MessageSource 빈 추가
+      - commons, errors, validations 메세지 정리
+
+- 4교시
+
+- join 기능 구현
