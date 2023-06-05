@@ -1,6 +1,7 @@
 package org.koreait.models.member;
 
 import lombok.RequiredArgsConstructor;
+import org.koreait.commons.constants.MemberType;
 import org.koreait.controllers.member.JoinForm;
 import org.koreait.entitis.Member;
 import org.koreait.repositories.MemberRepository;
@@ -17,6 +18,7 @@ public class JoinService {
 
     public void join(JoinForm joinForm) {
         Member member = new ModelMapper().map(joinForm, Member.class); // ModelMapper 가 직접 찾아서 build() 해준다
+        member.setType(MemberType.USER);
 
         String hash = passwordEncoder.encode(joinForm.getUserPw()); // PasswordEncoder 가 비밀번호를 직접 암호화 한다
         member.setUserPw(hash);

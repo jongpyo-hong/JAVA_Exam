@@ -2,6 +2,7 @@ package org.koreait.entitis;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.koreait.commons.constants.MemberType;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,6 +28,10 @@ public class Member extends BaseEntity {
 
     @Column(length = 11)
     private String mobile; // 휴대폰 번호
+
+    @Enumerated(EnumType.STRING)
+    @Column(length = 20)
+    private MemberType type = MemberType.USER; // USER - 사용자, ADMIN - 관리자
 
     @OneToMany(mappedBy = "member")
     private List<BoardData> boarDatas = new ArrayList<>();
