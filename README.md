@@ -75,3 +75,39 @@
 
 
 - login.html (아이디 저장 쿠키 구현)
+
+
+## 2023/06/07
+
+### Log
+
+- 타임리프 내 Authorize (관리자, 유저) 로그인 방식 구현
+
+- 통합구현 테스트 내용 프로젝트 추가 (board2)
+
+  - 인터페이스 명세서 (엑셀파일)
+
+  - 통합 테스트 구현 
+    - MockMvc : 스프링에서 제공되는 테스트 툴
+
+    - MockMvcRequestBuilders : 요청 관련 테스트 기능들
+    
+    - MockMvcResultMatchers : 요청후 검증에 관한 기능들
+            - andExpect(...)
+
+    - MockMvcResultHandlers  : 
+            - andDo(...) - print() : 요청과 응답에 대한 자세한 정보
+
+
+- 프로젝트
+  - commons
+    - rest - JSONResult.java
+    - CommonException.java
+
+  - restcontrollers
+    - BoardApiController.java
+    - CommonRestController.java
+
+- 통합 테스트
+  - tests
+    - BoardApiSaveTest

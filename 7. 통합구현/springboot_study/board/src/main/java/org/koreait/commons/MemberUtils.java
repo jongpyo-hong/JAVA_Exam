@@ -16,20 +16,20 @@ public class MemberUtils {
 
     public boolean isLogin() {
         return getMember() != null;
-    }
+    } // 로그인 여부
 
-    public boolean isAdmin() {
+    public boolean isAdmin() { // 관리자 여부
 
         return isLogin() && getMember().getType() == MemberType.ADMIN;
     }
 
-    public MemberInfo getMember() {
+    public MemberInfo getMember() { // 회원 정보 조회
         MemberInfo memberInfo = (MemberInfo)session.getAttribute("memberInfo");
 
         return memberInfo;
     }
 
-    public Member getEntity() {
+    public Member getEntity() { // 매핑을 위한 엔티티
         if (isLogin()) {
             Member member = new ModelMapper().map(getMember(), Member.class);
             return member;

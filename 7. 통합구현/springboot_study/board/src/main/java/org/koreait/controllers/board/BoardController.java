@@ -2,12 +2,13 @@ package org.koreait.controllers.board;
 
 import lombok.RequiredArgsConstructor;
 import org.koreait.entitis.BoardData;
-import org.koreait.entitis.Member;
 import org.koreait.models.board.BoardListService;
 import org.koreait.repositories.BoardDataRepository;
 import org.koreait.repositories.MemberRepository;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,8 +25,15 @@ public class BoardController {
     @GetMapping
     @ResponseBody
     public void index() {
-        List<BoardData> items = listService.gets();
-        items.stream().forEach(System.out::println);
+
+        BoardData boardData = boardDataRepository.findById(1L).orElse(null);
+        boardData.setSubject("(수정) 제목1");
+        boardDataRepository.flush();
+
+        //insertData();
+
+        //List<BoardData> items = listService.gets();
+        //items.stream().forEach(System.out::println);
 
         //insertData();
         //BoardData boardData = boardDataRepository.findById(1L).orElse(null);
@@ -40,6 +48,7 @@ public class BoardController {
     }
 
     private void insertData() {
+        /**
         Member member = Member.builder()
                 .userId("user01")
                 .userNm("사용자01")
@@ -49,6 +58,7 @@ public class BoardController {
                 .build();
 
         member = memberRepository.saveAndFlush(member);
+        */
 
         List<BoardData> items = new ArrayList<>();
         for (int i = 1; i <= 10; i ++) {
@@ -56,7 +66,7 @@ public class BoardController {
                     .subject("제목" + i)
                     .content("내용" + i)
                     .poster("작성자" + i)
-                    .member(member)
+                    //.member(member)
                     .build();
             items.add(item);
         }
