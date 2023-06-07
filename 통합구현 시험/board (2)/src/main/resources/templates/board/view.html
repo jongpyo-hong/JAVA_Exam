@@ -7,12 +7,14 @@
             <dt th:text="#{board.subject}"></dt>
             <dd th:text="${boardData.subject}"></dd>
         </dl>
+        <br>
         <dl>
             <dt th:text="#{board.content}"></dt>
-            <dd th:utext="${boardData.content}"></dd>
+            <dd th:utext="${boardData.content}"></dd><hr>
         </dl>
         <a th:href="@{/board/list}" th:text="#{board.list}">글목록</a>
         <a th:href="@{/board/write}" th:text="#{board.write}">글작성</a>
         <a th:href="@{/board/update/{id}(id=${boardData.id})}" th:text="#{board.update}">글수정</a>
+        <a th:href="@{/board/delete/{id}(id=${boardData.id})}" th:text="#{board.delete}">글삭제</a>
     </main>
 </html>

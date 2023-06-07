@@ -8,5 +8,6 @@
                 <a th:href="@{/board/view/{id}(id=*{id})}" th:text="*{subject}"></a>
             </li>
         </ul>
+        <a th:href="@{/board/write}" th:text="#{board.write}">글작성</a>
     </main>
 </html>

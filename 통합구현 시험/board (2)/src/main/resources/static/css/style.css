@@ -1,0 +1,25 @@
+/** 사이트 공통 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+* { box-sizing: border-box; font-family: 'Noto Sans KR', sans-serif; color: #000; outline: none; }
+html { font-size: 13px; }
+ul, ol { list-style: none; margin:0; padding:0; }
+li { border: 1px solid white; padding: 2px 0; width: fit-content; }
+dl, dt, dd { margin:0; padding: 0; }
+a { text-decoration: none; margin-top: 3px; }
+
+a:link, a:visited {
+     background-color: #FFA500;
+     border: 1px solid #FFA500;
+     border-radius: 5px;
+     color: maroon;
+     text-align: center;
+     text-decoration: none;
+     display: inline-block;
+}
+
+a:hover, a:active { background-color: #FF4500; }
+body { margin: 0; }
+img { border: 0; }
+
+/** 기준 너비 */
+.layout_width { max-width: 1300px; min-width: 1100px; margin: 0 auto; padding: 0 10px; }
