@@ -56,6 +56,34 @@ public class BoardApiUpdateTest {
     }
 
     @Test
+    @DisplayName("제목만 바꿀경우 성공시 응답코드 201")
+    void updateSubjectTest() throws Exception {
+        save();
+        BoardForm boardForm = new BoardForm();
+        boardForm.setMode("update");
+        String params = getParams("제목(수정)", boardForm.getContent());
+        mockMvc.perform(post("/api/board/update/1")
+                .contentType("application/json")
+                .content(params))
+                .andDo(print())
+                .andExpect(status().isCreated());
+    }
+
+    @Test
+    @DisplayName("내용만 바꿀경우 성공시 응답코드 201")
+    void updateContentTest() throws Exception {
+        save();
+        BoardForm boardForm = new BoardForm();
+        boardForm.setMode("update");
+        String params = getParams(boardForm.getSubject(), "내용 (수정)");
+        mockMvc.perform(post("/api/board/update/1")
+                        .contentType("application/json")
+                        .content(params))
+                .andDo(print())
+                .andExpect(status().isCreated());
+    }
+
+    @Test
     @DisplayName("게시글 수정 실패시 에러 메세지")
     void updateFailedTest() throws Exception {
         BoardForm boardForm = new BoardForm();
