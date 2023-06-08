@@ -31,7 +31,7 @@ public class BoardSaveValidator implements Validator<BoardForm> {
 
             // 게시글 등록 여부 체크
             if (!repository.exists(id)) {
-                throw new BoardValidationException("등록되지 않은 게시글 입니다.");
+                throw new BoardValidationException("게시글 등록 실패");
             }
         }
 
