@@ -16,7 +16,7 @@ public class BoardInfoService {
 
     public BoardData get(Long id) {
 
-        BoardData data = repository.findById(id).orElseThrow(()->new BoardValidationException("잘못된 요청입니다."));
+        BoardData data = repository.findById(id).orElseThrow(()->new BoardValidationException("게시글 조회 실패."));
         return data;
     }
 }
