@@ -41,7 +41,7 @@ public class BoardApiListTest {
     @DisplayName("게시글 목록 조회 성공시 상태코드 201, 게시글 출력")
     void listSuccessTest() throws Exception {
         getParams();
-        String body = mockMvc.perform(get("/api/board/get/1")
+        String body = mockMvc.perform(get("/api/board/list")
                         .contentType("application/json"))
                 .andDo(print())
                 .andExpect(status().isCreated())
@@ -52,9 +52,10 @@ public class BoardApiListTest {
     }
 
     @Test
-    @DisplayName("게시글 목록 조회 실패시 메세지 출력")
+    @DisplayName("게시글 목록 조회 실패시 에러 " +
+            "메세지")
     void listFailedTest() throws Exception {
-        String body = mockMvc.perform(get("/api/board/get/1000000")
+        String body = mockMvc.perform(get("/api/board/list")
                         .contentType("application/json"))
                 .andReturn()        // 응답 바디를 반환 해주는 명령
                 .getResponse()      // 응답 바디

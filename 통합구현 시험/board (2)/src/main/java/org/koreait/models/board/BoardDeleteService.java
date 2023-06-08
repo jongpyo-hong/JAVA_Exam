@@ -11,7 +11,7 @@ public class BoardDeleteService {
     private final BoardDataRepository repository;
 
     public void delete(Long id) {
-        BoardData boardData = repository.findById(id).orElseThrow(()->new BoardValidationException("잘못된 요청입니다."));
+        BoardData boardData = repository.findById(id).orElseThrow(()->new BoardValidationException("게시글 삭제 실패"));
 
         repository.delete(boardData);
         repository.flush();
