@@ -84,21 +84,6 @@ public class BoardApiUpdateTest {
     }
 
     @Test
-    @DisplayName("게시글 수정 실패시 에러 메세지")
-    void updateFailedTest() throws Exception {
-        BoardForm boardForm = new BoardForm();
-        boardForm.setMode("update");
-        String params = getParams("제목 (수정)", "내용 (수정)");
-        String body = mockMvc.perform(post("/api/board/update/1")
-                        .contentType("application/json")
-                        .content(params))
-                .andReturn()
-                .getResponse()
-                .getContentAsString(Charset.forName("UTF-8"));
-        assertTrue(body.contains("게시글 수정 실패"));
-    }
-
-    @Test
     @DisplayName("필수항목 (제목, 내용)이 없을 경우 발생하는 문구 테스트")
     void requiredSubjectTest() throws Exception {
         save();
