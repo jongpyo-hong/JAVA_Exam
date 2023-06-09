@@ -32,7 +32,7 @@ public class BoardApiController {
         List<BoardData> items = listService.gets();
 
         if (items.isEmpty()) {
-            throw new BoardValidationException("게시글 조회 실패");
+            throw new BoardValidationException("게시글 목록 조회 실패");
         }
 
         return ResponseEntity.status(HttpStatus.CREATED).body(items);

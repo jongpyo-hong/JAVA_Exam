@@ -13,50 +13,46 @@ import org.springframework.test.web.servlet.MockMvc;
 import java.nio.charset.Charset;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
-
 
 @SpringBootTest
 @AutoConfigureMockMvc
 @TestPropertySource("classpath:application-test.properties")
-public class BoardApiListTest {
+public class BoardApiGetTest {
 
     @Autowired
     private MockMvc mockMvc;
     @Autowired
     private BoardSaveService saveService;
 
-    private void getParams() {
-        for (long i = 1; i <= 5; i++ ) {
-            BoardForm items = new BoardForm();
-            items.setId(i);
-            items.setSubject("제목" + i);
-            items.setContent("내용" + i);
-            saveService.save(items);
-        }
+    private void getParam() {
+
+            BoardForm item = new BoardForm();
+            item.setId(1l);
+            item.setSubject("제목");
+            item.setContent("내용");
+            saveService.save(item);
     }
 
     @Test
-    @DisplayName("게시글 목록 조회 성공시 응답코드 201")
-    void SuccessListTest() throws Exception {
-        getParams();
-        String body = mockMvc.perform(get("/api/board/list")
-                .contentType("application/json"))
+    @DisplayName("게시판 조회 성공시 응답코드 201")
+    void successGetTest() throws Exception {
+        getParam();
+        mockMvc.perform(get("/api/board/get/1")
+                        .contentType("application/json"))
                 .andDo(print())
                 .andExpect(status().isCreated())
                 .andReturn()
-                .getResponse()
-                .getContentAsString(Charset.forName("UTF-8"));
-        System.out.println(body);
+                .getResponse();
     }
 
     @Test
-    @DisplayName("게시글 목록 조회 실패시 에러 메세지")
-    void FailedListTest() throws Exception {
-        String body = mockMvc.perform(get("/api/board/list")
-                        .contentType("application/json"))
+    @DisplayName("게시판 조회 실패시 에러메세지")
+    void failedGetTest() throws Exception {
+        String body = mockMvc.perform(get("/api/board/get/1")
+                .contentType("application/json"))
                 .andReturn()
                 .getResponse()
                 .getContentAsString(Charset.forName("UTF-8"));

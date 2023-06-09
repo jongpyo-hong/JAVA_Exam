@@ -1,19 +1,15 @@
 package org.koreait.restcontrollers;
 
 import lombok.RequiredArgsConstructor;
-import lombok.extern.java.Log;
 import org.koreait.controllers.BoardForm;
 import org.koreait.entities.BoardData;
 import org.koreait.models.board.*;
-import org.modelmapper.ModelMapper;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@Log
 @RestController
 @RequestMapping("/api/board")
 @RequiredArgsConstructor
@@ -26,12 +22,11 @@ public class BoardApiController {
 
 
     @PostMapping("/write")
-    public ResponseEntity<Object> write(@RequestBody BoardForm boardForm) { // 요청을 json 형식으로
-        //log.info(boardForm.toString());
+    public ResponseEntity<Object> write(@RequestBody BoardForm boardForm) {
 
         saveService.save(boardForm);
 
-        return ResponseEntity.status(HttpStatus.CREATED).build(); // CREATED : 201
+        return ResponseEntity.status(HttpStatus.CREATED).build();
     }
 
     @GetMapping("/list")
@@ -39,7 +34,7 @@ public class BoardApiController {
         List<BoardData> items = listService.gets();
 
         if (items.isEmpty()) {
-            throw new BoardValidationException("게시글 불러오기 실패");
+            throw new BoardValidationException("게시글 목록 조회 실패");
         }
 
         return ResponseEntity.status(HttpStatus.CREATED).body(items);
@@ -60,14 +55,12 @@ public class BoardApiController {
     }
 
     @PostMapping("/update/{id}")
-    public ResponseEntity<Object> update(@PathVariable Long id, @RequestBody BoardForm boardForm) {
-
+    public ResponseEntity<Object> update(@RequestBody BoardForm boardForm, @PathVariable Long id) {
         boardForm.setId(id);
         boardForm.setMode("update");
         saveService.save(boardForm);
 
         return ResponseEntity.status(HttpStatus.CREATED).build();
-
     }
 
 }

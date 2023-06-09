@@ -31,7 +31,7 @@ public class BoardApiSaveTest {
     @Test
     @DisplayName("게시글 작성 성공시 응답코드 201")
     void saveSuccessTest() throws Exception{
-        String params = getParams("테스트 제목", "테스트 내용");
+        String params = getParams("게시글 제목", "게시글 내용");
         mockMvc.perform(post("/api/board/write")
                 .contentType("application/json")
                 .content(params))
@@ -40,9 +40,9 @@ public class BoardApiSaveTest {
     }
 
     @Test
-    @DisplayName("제목 누락시 에러 메세지")
+    @DisplayName("필수 항목(제목)이 없을시 에러메세지")
     void requiredSubjectTest() throws Exception {
-        String params = getParams("", "테스트 내용");
+        String params = getParams("", " 게시글 내용");
         String body = mockMvc.perform(post("/api/board/write")
                 .contentType("application/json")
                 .content(params))
@@ -53,9 +53,9 @@ public class BoardApiSaveTest {
     }
 
     @Test
-    @DisplayName("내용 누락시 에러 메세지")
+    @DisplayName("필수 항목(내용)이 없을시 에러메세지")
     void requiredContentTest() throws Exception {
-        String params = getParams("제목", "");
+        String params = getParams("게시글 제목", "");
         String body = mockMvc.perform(post("/api/board/write")
                         .contentType("application/json")
                         .content(params))

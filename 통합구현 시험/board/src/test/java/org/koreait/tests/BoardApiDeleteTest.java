@@ -19,26 +19,28 @@ import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @SpringBootTest
-@TestPropertySource("classpath:application-test.properties")
 @AutoConfigureMockMvc
+@TestPropertySource("classpath:application-test.properties")
 public class BoardApiDeleteTest {
+
     @Autowired
     private MockMvc mockMvc;
-
     @Autowired
     private BoardSaveService saveService;
 
-    private void getParams() {
+    private BoardForm getParam() {
         BoardForm boardForm = new BoardForm();
         boardForm.setId(1l);
-        boardForm.setSubject("게시글 제목");
-        boardForm.setContent("게시글 내용");
+        boardForm.setSubject("제목");
+        boardForm.setContent("내용");
         saveService.save(boardForm);
+        return boardForm;
     }
+
     @Test
-    @DisplayName("게시글 삭제 성공시 상태코드 201")
-    void deleteSuccessTest() throws Exception {
-        getParams();
+    @DisplayName("게시글 삭제 성공시 응답코드 201")
+    void successDeleteTest() throws Exception {
+        getParam();
         mockMvc.perform(get("/api/board/delete/1")
                         .contentType("application/json"))
                 .andDo(print())
@@ -47,11 +49,9 @@ public class BoardApiDeleteTest {
 
     @Test
     @DisplayName("게시글 삭제 실패시 에러 메세지")
-    void deleteFailedTest() throws Exception {
+    void failedDeleteTest() throws Exception {
         String body = mockMvc.perform(get("/api/board/delete/1")
                         .contentType("application/json"))
-                .andDo(print())
-                .andExpect(status().isBadRequest())
                 .andReturn()
                 .getResponse()
                 .getContentAsString(Charset.forName("UTF-8"));
